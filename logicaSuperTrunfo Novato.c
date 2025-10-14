@@ -84,8 +84,6 @@ int main() {
     printf("Número de Pontos Turísticos: \n");
     scanf("%d", &pontosturisticos2);
 
-
-    
 //Cálculo carta 1
 
     float densidade1 = populacao1 / area1;
