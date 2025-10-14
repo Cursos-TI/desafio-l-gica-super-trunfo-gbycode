@@ -14,8 +14,7 @@ int main () {
     int pontosturisticos1 = 20, pontosturisticos2 = 10;
     float densidade1 = populacao1 / area1;
      float densidade2 = populacao2 / area2;
-    char carta1;
-    char carta2;
+    
 
     int opcao;
     float valor1, valor2;
