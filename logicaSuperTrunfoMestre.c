@@ -81,7 +81,7 @@ int main () {
 
     printf("\n********Escolha o segundo atributo********\n");
     for (int i = 1; i <= 5; i++){
-        if (i != atributo1){
+        if (i != opcao1){
             switch (i)
             {
             case 1:
@@ -167,11 +167,30 @@ printf("\n=================Resultado final=================\n");
     printf("%s: %.2f\n", nome1, soma1);
     printf("%s: %.2f\n", nome2, soma2);
 
-    //comparação final
-
-    if(soma1 > soma2)
+//comparação final
+    int pontos1 = 0, pontos2 = 0;
+//primeiro atributo
+    if(opcao1 == 5) {
+        if(valor1_1 < valor2_1) pontos1++;
+        else if(valor2_1 < valor1_1) pontos2++;
+    } 
+        else{
+            if(valor1_1 > valor2_1) pontos1++;
+            else if(valor2_1 > valor1_1) pontos2++;
+    }
+//segundo atributo
+ 
+    if(opcao2 == 5) {
+        if(valor1_2 < valor2_2) pontos1++;
+        else if(valor2_2 < valor1_2) pontos2++;
+    } 
+        else{
+            if(valor1_2 > valor2_2) pontos1++;
+            else if(valor2_2 > valor1_2) pontos2++;
+    }
+    if(pontos1 > pontos2)
         printf("%s venceu a rodada!\n", nome1);
-        else if (soma2 > soma1)
+        else if (pontos2 > pontos1)
             printf("%s venceu a rodada!\n", nome2);
         else
             printf("Empate!\n");
